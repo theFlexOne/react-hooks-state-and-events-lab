@@ -13,7 +13,9 @@ function Item({ name, category }) {
     <li className={status ? 'in-cart' : ''} onClick={addToCart}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add">Add to Cart</button>
+      <button className={status ? 'remove' : 'add'}>
+        {status ? 'Remove from Cart' : 'Add to Cart'}
+      </button>
     </li>
   );
 }
